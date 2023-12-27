@@ -1,0 +1,16 @@
+[project]
+name = "geogetter"
+version = "0.1.0"
+dependencies = ["requests==2.31.0",]
+authors = [
+  { name="Mikolaj my.doom", email="miszczes0@gmail.com" },
+]
+description = "Very simple and lightweight geocoder"
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = ["black"]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
