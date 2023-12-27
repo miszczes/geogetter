@@ -1,6 +1,6 @@
 [project]
 name = "geogetter"
-version = "0.1.1"
+version = "0.2.0"
 dependencies = ["requests==2.31.0",]
 authors = [
   { name="Mikolaj my.doom", email="miszczes0@gmail.com" },
