@@ -11,6 +11,10 @@ GeoGetter is a simple Python library and command-line tool that helps you retrie
 - Fetch timezone data for a specific location.
 - Easy-to-use Python library with a command-line interface.
 
+## GitHub repository
+
+🔗 [geogetter GitHub repo](https://github.com/miszczes/geogetter) 
+
 ## Installation
 
 You can install GeoGetter using pip (consider using venv):
@@ -34,3 +38,35 @@ Running this script should result in this output
 ```output
 -27.1259451 -109.34963353785872
 ```
+
+It's also possible to get more detailed information about the target
+using following code:
+```python
+from geogetter import Geocoder
+
+big_ben = Geocoder("Big Ben", address_json=True)
+
+print(big_ben.target_name, "\n")
+
+for item in big_ben.address_json:
+    print(f"{item}: {big_ben.address_json.get(item)}")
+```
+This should result in the following std out:
+```output
+Big Ben, Bridge Street, Westminster, Millbank, City of Westminster, Greater London, England, SW1A 2JX, United Kingdom 
+
+amenity: Big Ben
+road: Bridge Street
+quarter: Westminster
+suburb: Millbank
+city: City of Westminster
+ISO3166-2-lvl8: GB-WSM
+state_district: Greater London
+state: England
+ISO3166-2-lvl4: GB-ENG
+postcode: SW1A 2JX
+country: United Kingdom
+country_code: gb
+```
+
+
